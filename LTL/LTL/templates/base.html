@@ -16,6 +16,16 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-{% block content %}{% endblock %}
+  <header class="site-header">
+    <a href="/">Lightning Talks Live</a>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="site-footer">
+    &copy; 2014 Lincoln Loop, LLC.
+
+    <a href="https://github.com/lincolnloop/LightningTalksLive">View on Github</a>
+  </footer>
 </body>
 </html>
