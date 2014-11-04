@@ -66,10 +66,10 @@ button,
 
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
 }
 
+button,
 .btn-primary {
   @include button-colors(darken($darksalmon, 15%));
 }

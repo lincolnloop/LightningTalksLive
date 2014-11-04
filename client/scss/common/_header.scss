@@ -6,9 +6,34 @@
   color: $white;
 }
 
+.site-header .inner-container {
+  @include flexbox;
+}
+
 .site-header a {
   @include inline-block;
-  font-size: ms(.85);
+  font-size: ms(1);
   line-height: ms(2);
   color: $white;
+}
+
+.logo {
+  @include flex(1);
+  font-family: $support-font;
+  font-weight: 600;
+}
+
+.logo i {
+  color: $lemon;
+}
+
+.primary-nav {
+  @include flexbox;
+  @include flex(1);
+  @include justify-content(flex-end);
+}
+
+.primary-nav a {
+  @include inline-block;
+  margin-left: ms(1);
 }

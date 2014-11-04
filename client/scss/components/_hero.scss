@@ -31,16 +31,16 @@ category: Components
 
 .hero .headline {
   font-family: $base-font;
-  font-size: ms(2.05);
+  font-size: ms(2);
   font-weight: 600;
 }
 
 .hero .sub-headline {
-  margin-bottom: ms(.5);
+  margin-bottom: ms(1);
   font-size: ms(1);
 }
 
 .hero .schedule-cta {
   @extend .btn-primary;
-  font-size: ms(1);
+  font-size: ms(.95);
 }
