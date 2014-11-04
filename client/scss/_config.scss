@@ -1,6 +1,8 @@
 $base-font: 'Varela Round', sans-serif;
 $support-font: 'Source Sans Pro', sans-serif;
 
+$ms-base: 1rem;
+
 // Generic Grays/Whites/Darks
 $dark-gray: #555;
 $gray: #797979;
@@ -9,14 +11,25 @@ $whitesmoke: #fdfdfd;
 $white: #fff;
 
 // Primary palette colors
+// Demo: http://coolors.co/dfecd4-fff8ca-f9d89b-e99d86-504c57
 // TODO: These names are poor
-$dim-gray: #665E55;
-$silver: #A4CEB9;
-$gainsboro: #d9eeda;
-$light-yellow: #fdfce5;
-$bisque: #f2e9c6;
+$gainsboro: #dfecd4;
+$lemon: #fff8ca;
+$navajowhite: #f9d89b;
+$darksalmon: #e99d86;
+$darkslategray: #504c57;
 
 // Application of palette
-$text-color: $gray;
-$brand-color: $dim-gray;
-$brand-color-alt: lighten($dim-gray, 10%);
+$text-color: $darkslategray;
+$brand-color: $darkslategray;
+$brand-color-alt: $gainsboro;
+
+$highlight-color: $lemon;
+$error-color: darken($darksalmon, 15%);
+
+// Style Globals
+$btn-bottom-width: 2px;
+$border-radius: 2px;
+$shadow-border-size: 4px;
+
+$input-padding: .5em 1em;

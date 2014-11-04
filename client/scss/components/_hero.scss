@@ -22,11 +22,25 @@ category: Components
 */
 .hero {
   padding: ms(1) 0;
-  background: $dim-gray;
-  color: $white;
+  // Pattern: http://ptrn.it/1uqXjta
+  background: $darkslategray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAOhQTH/V69bwogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQAfyiYLlJTPyQAAAABJRU5ErkJggg==) repeat;
+
+  text-align: center;
+  color: $whitesmoke;
 }
 
 .hero .headline {
   font-family: $base-font;
+  font-size: ms(2.05);
   font-weight: 600;
+}
+
+.hero .sub-headline {
+  margin-bottom: ms(.5);
+  font-size: ms(1);
+}
+
+.hero .schedule-cta {
+  @extend .btn-primary;
+  font-size: ms(1);
 }

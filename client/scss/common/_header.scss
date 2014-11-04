@@ -1,0 +1,14 @@
+
+
+
+.site-header {
+  background: darken($darkslategray, 5%);
+  color: $white;
+}
+
+.site-header a {
+  @include inline-block;
+  font-size: ms(.85);
+  line-height: ms(2);
+  color: $white;
+}

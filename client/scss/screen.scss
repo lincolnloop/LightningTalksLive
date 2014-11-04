@@ -3,11 +3,15 @@
 @import "vendor/normalize";
 @import "vendor/modular-scale";
 
+@import "utils/mixins";
+
 @import "typography";
 
-@import "common/base"; // Base reset per our design
+@import "common/elements"; // Base reset per our design
 @import "common/layout";
 @import "common/header";
 @import "common/footer";
+
+@import "common/buttons";
 
 @import "components/hero";
