@@ -35,16 +35,13 @@ gulp.task('watch', ['sass'], function() {
     }
   });
 
-  //gulp.watch('./postmark/client/*.js', ['jshint'])
-  //  .pipe(livereload());
-
   gulp.watch('./static/css/**/*.css').on('change', function(event) {
     gutil.log(gutil.colors.bgBlue('Reloading css...'));
     livereload.changed(event.path);
   });
 
   // watch the sources and rebuild
-  gulp.watch('./postmark/client/scss/**/*.scss', ['sass']);
+  gulp.watch('./client/scss/**/*.scss', ['sass']);
 
   gutil.log(gutil.colors.bgGreen('Watching for changes...'));
 });
