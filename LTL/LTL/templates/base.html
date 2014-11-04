@@ -9,6 +9,7 @@
 
   <title>{% block head_title %}{% endblock %} | Lightning Talks Live</title>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Varela+Round' rel='stylesheet' type='text/css' />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" />
   <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" />
@@ -18,7 +19,15 @@
 <div class="container">
   <header class="site-header" role="banner">
     <div class="inner-container">
-      <a href="/">Lightning Talks Live</a>
+      <a href="/" class="logo">
+        <i class="fa fa-bolt"> </i>
+        Lightning Talks Live
+      </a>
+
+      <nav class="primary-nav">
+        <a href="#">View Schedule</a>
+        <a href="#">Log In</a>
+      </nav>
     </div>
     {% if request.user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
