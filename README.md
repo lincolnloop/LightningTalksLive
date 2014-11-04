@@ -5,6 +5,20 @@ Development for Lightning Talks Live
 
 ## Installation
 
+### Project
+
+Install project source::
+
+    virtualenv LTL
+    . LTL/bin/activate
+    pip install -e git+git@github.com:lincolnloop/LightningTalksLive.git#egg=LightningTalksLive
+    cd LTL/src/lightningtalkslive
+    pip install -r requirements.txt
+    cd LTL
+    python manage.py migrate
+    python manage.py runserver
+
+
 [npm](https://www.npmjs.org/) to manage JavaScript dependencies.
 
 ### JS dependencies
