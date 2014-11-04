@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_auth',
+
     'LTL.presenters',
 )
 
@@ -95,3 +97,44 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#
+# Django Social Auth
+#
+
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.twitter.TwitterBackend',
+    # 'social_auth.backends.facebook.FacebookBackend',
+    # 'social_auth.backends.google.GoogleOAuthBackend',
+    # 'social_auth.backends.google.GoogleOAuth2Backend',
+    # 'social_auth.backends.google.GoogleBackend',
+    # 'social_auth.backends.yahoo.YahooBackend',
+    # 'social_auth.backends.browserid.BrowserIDBackend',
+    # 'social_auth.backends.contrib.linkedin.LinkedinBackend',
+    # 'social_auth.backends.contrib.disqus.DisqusBackend',
+    # 'social_auth.backends.contrib.livejournal.LiveJournalBackend',
+    # 'social_auth.backends.contrib.orkut.OrkutBackend',
+    # 'social_auth.backends.contrib.foursquare.FoursquareBackend',
+    'social_auth.backends.contrib.github.GithubBackend',
+    # 'social_auth.backends.contrib.vk.VKOAuth2Backend',
+    # 'social_auth.backends.contrib.live.LiveBackend',
+    # 'social_auth.backends.contrib.skyrock.SkyrockBackend',
+    # 'social_auth.backends.contrib.yahoo.YahooOAuthBackend',
+    # 'social_auth.backends.contrib.readability.ReadabilityBackend',
+    # 'social_auth.backends.contrib.fedora.FedoraBackend',
+    # 'social_auth.backends.OpenIDBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+
+TWITTER_CONSUMER_KEY         = 'nZz9M4rGIRIS18uP1ECvMRuQS'
+TWITTER_CONSUMER_SECRET      = '8XAIbiH4XkCw8L6vWxPCIowLTuUHeF2osRmpDTOQKx0iWX75Nu'
+
+LOGIN_URL          = '/login-form/'
+LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_ERROR_URL    = '/login-error/'
+
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
+SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
+SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'

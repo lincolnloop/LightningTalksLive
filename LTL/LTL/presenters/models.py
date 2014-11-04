@@ -13,5 +13,10 @@ class Profile(TimeStampedModel):
     company = models.URLField(blank=True, null=True)
 
 
-
+class Talk(TimeStampedModel):
+    presenter = models.ForeignKey(Profile)
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    when = models.DateTimeField()
+    topics = models.CharField(max_length=255, null=True, blank=True)
 
