@@ -26,7 +26,7 @@
 // Creates perfectly aligned inline block elements
 @mixin inline-block {
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 // Center aligns something absolutely. Nuke from orbit method.
@@ -92,5 +92,13 @@
 @mixin bottomless {
   & > *:last-child {
     @include trailer(0);
+  }
+}
+
+// Poor man's media query mixin.
+// Pass in named media queries!
+@mixin at-break($media-query) {
+  @media (#{$media-query}) {
+    @content;
   }
 }

@@ -21,7 +21,7 @@ category: Components
 ```
 */
 .hero {
-  padding: ms(1) 0;
+  padding: ms(1.5) 0;
   // Pattern: http://ptrn.it/1uqXjta
   background: $darkslategray url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAOhQTH/V69bwogujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQAfyiYLlJTPyQAAAABJRU5ErkJggg==) repeat;
 
@@ -38,6 +38,11 @@ category: Components
 .hero .sub-headline {
   margin-bottom: ms(1);
   font-size: ms(1);
+
+  @include at-break($md-query) {
+    @include center-block;
+    max-width: 50vw;
+  }
 }
 
 .hero .schedule-cta {
