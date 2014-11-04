@@ -18,7 +18,7 @@
 
 .site-header a {
   display: block;
-  line-height: ms(2);
+  line-height: 3rem;
   color: $white;
 }
 
@@ -34,9 +34,7 @@
 }
 
 .primary-nav a {
-  padding-top: .2em;
   font-size: ms(1, 14px);
-  line-height: ms(2);
 
   &:hover {
     color: $lemon;
@@ -47,6 +45,7 @@
   @include at-break($md-query) {
     a {
       @include inline-block;
+      line-height: 4.5rem;
     }
 
     .inner-container {
@@ -58,6 +57,7 @@
     .logo {
       @include inline-block;
       @include flex(1);
+      text-align: left;
     }
 
     .primary-nav {
