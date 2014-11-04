@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'social_auth',
 
     'LTL.presenters',
+    'LTL.schedule',
 )
 
 MIDDLEWARE_CLASSES = (
