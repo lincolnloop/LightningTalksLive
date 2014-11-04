@@ -55,6 +55,7 @@ gulp.task('watch', ['sass', 'browserify'], function() {
     }
   });
 
+  // watch the css files and reload the changed ones
   gulp.watch('./static/css/**/*.css').on('change', function(event) {
     gutil.log(gutil.colors.bgBlue('Reloading css...'));
     livereload.changed(event.path);
