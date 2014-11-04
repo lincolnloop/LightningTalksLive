@@ -35,3 +35,14 @@ Use Gulp to build and serve the site locally, and watch for changes:
 ### One time build
 
     $ gulp build
+
+## Styleguide
+
+To compile the styleguide, you will need to install [Hologram](http://trulia.github.io/hologram/), which has is a Ruby gem. This project uses Bundler to handle Ruby dependencies.
+
+    $ gem install bundler
+    $ bundle install
+
+This will install Hologram via the Gemfile in the project. Once this is complete, you can compile the styleguide via the following commands:
+
+    

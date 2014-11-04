@@ -14,16 +14,26 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-  <header class="site-header">
-    <a href="/">Lightning Talks Live</a>
+<div class="container">
+  <header class="site-header" role="banner">
+    <div class="inner-container">
+      <a href="/">Lightning Talks Live</a>
+    </div>
   </header>
 
-  {% block content %}{% endblock %}
+  <main class="site-main" role="main">
+    {% block content %}{% endblock %}
+  </main>
 
-  <footer class="site-footer">
-    &copy; 2014 Lincoln Loop, LLC.
+  <footer class="site-footer" role="banner">
+    <div class="inner-container">
+      <small>
+        &copy; 2014 Lincoln Loop, LLC.
+      </small>
 
-    <a href="https://github.com/lincolnloop/LightningTalksLive">View on Github</a>
+      <a href="https://github.com/lincolnloop/LightningTalksLive">View on Github</a>
+    </div>
   </footer>
+</div>
 </body>
 </html>
