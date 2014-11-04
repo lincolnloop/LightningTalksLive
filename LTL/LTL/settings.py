@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'LTL.urls'
 
 TEMPLATE_DIRS = (
-    'LTL/LTL/templates',
+    'LTL/templates',
 )
 
 WSGI_APPLICATION = 'LTL.wsgi.application'
