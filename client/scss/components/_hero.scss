@@ -1,5 +1,32 @@
+/*
+ * HERO
+ *
+ * Various styles for large block elements.
+ */
 
+/*doc
+---
+title: Hero
+name: hero
+category: Components
+---
 
+`.hero` is a large spot, used for grabbing the user's attention. Typically it includes a header:
+
+```html_example
+<div class="hero">
+  <h1 class="headline">Welcome</h1>
+  <h2 class="sub-headline">Lightning Talks Live is a lovely site</h2>
+</div>
+```
+*/
 .hero {
-  @extend .inner-container;
+  padding: ms(1) 0;
+  background: salmon;
+  color: $white;
+}
+
+.hero .headline {
+  font-family: $base-font;
+  font-weight: 600;
 }
