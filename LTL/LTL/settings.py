@@ -53,7 +53,7 @@ ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(ROOT_PATH, '../'))
 
 STATICFILES_DIRS = (
-    ('', os.path.join(PROJECT_ROOT, 'static')),
+    ('', os.path.join(os.path.dirname(PROJECT_ROOT), 'static')),
 )
 
 ROOT_URLCONF = 'LTL.urls'
