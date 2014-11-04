@@ -1,4 +1,11 @@
-@import "vendor/normalize";
 @import "config";
 
+@import "vendor/normalize";
+@import "vendor/modular-scale";
+
+@import "common/base"; // Base reset per our design
 @import "common/layout";
+@import "common/header";
+@import "common/footer";
+
+@import "components/hero";
