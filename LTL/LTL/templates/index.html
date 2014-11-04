@@ -18,7 +18,9 @@
 
   <video id="basic-stream" class="videostream" autoplay=""></video>
   <p><button id="capture-button">Capture video</button> <button id="stop-button">Stop</button></p>
+{% endblock %}
 
+{% block javascript %}
 <script>
 function errorCallback(e) {
   if (e.code == 1) {
@@ -68,4 +70,5 @@ document.querySelector('#stop-button').addEventListener('click', function(e) {
 }, false);
 })();
 </script>
+<script src="{{ STATIC_URL }}js/ltl.js"></script>
 {% endblock %}
