@@ -15,7 +15,9 @@
 
   <video id="basic-stream" class="videostream" autoplay=""></video>
   <p><button id="capture-button">Capture video</button> <button id="stop-button">Stop</button></p>
+{% endblock %}
 
+{% block javascript %}
 <script>
 function errorCallback(e) {
   if (e.code == 1) {
