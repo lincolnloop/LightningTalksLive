@@ -53,6 +53,16 @@ MIDDLEWARE_CLASSES = (
 )
 
 
+TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.request",
+    "django.core.context_processors.tz",
+    "django.contrib.messages.context_processors.messages")
+
+
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(ROOT_PATH, '../'))
 
@@ -132,9 +142,9 @@ TWITTER_CONSUMER_KEY         = 'nZz9M4rGIRIS18uP1ECvMRuQS'
 TWITTER_CONSUMER_SECRET      = '8XAIbiH4XkCw8L6vWxPCIowLTuUHeF2osRmpDTOQKx0iWX75Nu'
 
 LOGIN_URL          = '/login-form/'
-LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_REDIRECT_URL = '/upcoming/'
 LOGIN_ERROR_URL    = '/login-error/'
 
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = 'get-started'
 SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
 SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'

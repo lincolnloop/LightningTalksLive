@@ -4,13 +4,9 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
-<h1>Hey! You're Here.</h1>
+<h1>Upcoming Presentations</h1>
 
 <div>
-    <form method="post">
-        {% csrf_token %}
-        {{form}}
-        <button type="submit">Save</button>
-    </form>
+    Next 5 Talks:
 </div>
 {% endblock %}
