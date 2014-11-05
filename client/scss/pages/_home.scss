@@ -39,9 +39,14 @@ body.home {
     font-weight: 600;
   }
 
-  .by-line {
+  .by-line,
+  .present-time {
     margin-bottom: 0;
     font-size: .9rem;
+  }
+
+  .timestamp {
+    font-weight: bold;
   }
 
   .talk-description {
