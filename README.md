@@ -23,8 +23,8 @@ Install project source::
 
 ### JS dependencies
 
-   npm install -g gulp
-   npm install
+    cd ..
+    npm install -g gulp
 
 ### Running locally
 
@@ -45,4 +45,4 @@ To compile the styleguide, you will need to install [Hologram](http://trulia.git
 
 This will install Hologram via the Gemfile in the project. Once this is complete, you can compile the styleguide via the following commands:
 
-    
+
