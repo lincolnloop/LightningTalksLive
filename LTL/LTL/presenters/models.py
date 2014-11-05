@@ -6,8 +6,7 @@ from LTL.core.models import TimeStampedModel
 
 class Profile(TimeStampedModel):
     user = models.ForeignKey('auth.User')
-    #TODO require name
-    name = models.CharField(max_length=255, blank=True, null=True)
+    name = models.CharField(max_length=255)
     twitter = models.URLField(blank=True, null=True)
     linked_in = models.URLField(blank=True, null=True)
     avatar = models.ImageField(blank=True, null=True)

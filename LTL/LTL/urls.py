@@ -13,8 +13,8 @@ urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'', include('social_auth.urls')),
 
-    # Users who have just registered land here
     url(r'^complete/twitter/get-started/$', RedirectView.as_view(url=reverse_lazy('social_auth_new_user'))),
+    # Users who have just registered land here
     url(r'^get-started/$',
         presenter_views.GetStartedView.as_view(),
         name="social_auth_new_user"),
