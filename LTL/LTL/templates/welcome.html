@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_title %}Take the Stage{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<h1>Hey! You're Here.</h1>
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}

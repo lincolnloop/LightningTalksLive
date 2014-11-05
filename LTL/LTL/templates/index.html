@@ -11,9 +11,7 @@
     <h2 class="sub-headline"><strong class="ltl-brand">Lightning Talks Live</strong> allows enthusiastic minds to share their idea 5 minutes at a time.</h2>
 
     <p class="cta-block">
-      <a href="#" class="btn schedule-cta">
-        Schedule a Talk
-      </a>
+      <a href="{% url "socialauth_begin" "twitter" %}" class="btn schedule-cta">Schedule a Talk</a>
     </p>
   </div>
 </div>
@@ -157,60 +155,8 @@
     </div>
   </div>
 </div>
-
-  <video id="basic-stream" class="videostream" autoplay=""></video>
-  <p><button id="capture-button">Capture video</button> <button id="stop-button">Stop</button></p>
 {% endblock %}
 
 {% block javascript %}
-<script>
-function errorCallback(e) {
-  if (e.code == 1) {
-    alert('User denied access to their camera');
-  } else {
-    alert('getUserMedia() not supported in your browser.');
-  }
-  //e.target.src = 'http://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv';
-}
-
-(function() {
-var video = document.querySelector('#basic-stream');
-var button = document.querySelector('#capture-button');
-var localMediaStream = null;
-
-button.addEventListener('click', function(e) {
-  if (navigator.mozGetUserMedia) {
-    navigator.mozGetUserMedia('video', function(stream) {
-      video.src = stream;
-      video.controls = true;
-      localMediaStream = stream;
-    }, errorCallback);
-  } else if (navigator.webkitGetUserMedia) {
-    navigator.webkitGetUserMedia({
-        video: {
-            mandatory: {
-                chromeMediaSource: 'screen',
-                maxWidth: 1280,
-                maxHeight: 720
-            },
-            optional: []
-        },
-        audio: true
-    }, function(stream) {
-      video.src = window.URL.createObjectURL(stream);
-      video.controls = true;
-      localMediaStream = stream;
-    }, errorCallback);
-  } else {
-    errorCallback({target: video});
-  }
-}, false);
-
-document.querySelector('#stop-button').addEventListener('click', function(e) {
-  video.pause();
-  localMediaStream.stop(); // Doesn't do anything in Chrome.
-}, false);
-})();
-</script>
 <script src="{{ STATIC_URL }}js/ltl.js"></script>
 {% endblock %}

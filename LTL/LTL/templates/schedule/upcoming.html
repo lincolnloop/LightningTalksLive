@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load scheduling %}
+
+{% block head_title %}Take the Stage{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<h2>Upcoming Presentations</h2>
+
+
+
+{% get_upcoming_talks as talks %}
+<div>
+
+   {% for talk in talks %}
+        {{ talk }}
+    {% empty %}
+        No talks registered :(
+    {% endfor %}
+
+</div>
+
+<h2>Give a Talk</h2>
+
+{% get_available_time_slots as open_slots %}
+<ul>
+{% for slot in open_slots %}
+    <li>{{ slot }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
