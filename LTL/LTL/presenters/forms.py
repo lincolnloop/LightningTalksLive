@@ -7,3 +7,9 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = models.Profile
         exclude = ('user', )
+
+
+class TalkForm(forms.ModelForm):
+    class Meta:
+        model = models.Talk
+        exclude = ('presenter', )

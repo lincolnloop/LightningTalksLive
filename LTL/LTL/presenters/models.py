@@ -17,7 +17,7 @@ class Profile(TimeStampedModel):
 
 
 class Talk(TimeStampedModel):
-    presenter = models.ForeignKey(Profile)
+    presenter = models.ForeignKey('auth.User')
     title = models.CharField(max_length=255)
     description = models.TextField()
     when = models.DateTimeField()

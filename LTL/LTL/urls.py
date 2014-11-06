@@ -19,6 +19,9 @@ urlpatterns = patterns('',
         presenter_views.GetStartedView.as_view(),
         name="social_auth_new_user"),
 
+    url(r'^talks/register/$', presenter_views.CreateTalk.as_view(), name='create_talk'),
+
+
     # Existing user login
     # url(r'^upcoming/', schedule_views.Upcoming.as_view(), name='schedule_upcoming'),
     url(r'^upcoming/$', TemplateView.as_view(template_name='schedule/upcoming.html'), name='schedule_upcoming'),

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head_title %}Take the Stage{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<h1>Register a Talk</h1>
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.description }}
+        {{ form.topics }}
+        <input type="hidden" name="when" value="{{request.GET.when}}"/>
+        <button type="submit">Save</button>
+    </form>
+</div>
+{% endblock %}
