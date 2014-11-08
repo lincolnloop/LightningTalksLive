@@ -5,7 +5,7 @@ from LTL.core.models import TimeStampedModel
 
 
 class Profile(TimeStampedModel):
-    user = models.ForeignKey('auth.User')
+    user = models.OneToOneField('auth.User')
     name = models.CharField(max_length=255)
     twitter = models.URLField(blank=True, null=True)
     linked_in = models.URLField(blank=True, null=True)
@@ -22,4 +22,10 @@ class Talk(TimeStampedModel):
     description = models.TextField()
     when = models.DateTimeField()
     topics = models.CharField(max_length=255, null=True, blank=True)
+
+    def __unicode__(self):
+        return u"{} by {} ({})".format(
+            self.title,
+            self.presenter.profile.name,
+            self.when)
 

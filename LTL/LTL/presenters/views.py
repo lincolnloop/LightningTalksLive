@@ -1,3 +1,6 @@
+import datetime
+
+from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.views.generic import View
 
@@ -33,18 +36,36 @@ class CreateTalk(View):
     template_name = 'presenters/create_talk.html'
 
     def get(self, request):
-
-        form = forms.TalkForm()
+        when = datetime.datetime(
+            int(request.GET['year']),
+            int(request.GET['month']),
+            int(request.GET['day']),
+            int(request.GET['hour']),
+            int(request.GET['minute']))
+        form = forms.TalkForm(initial={'when': when})
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
 
         form = forms.TalkForm(request.POST)
         if form.is_valid():
+
+            #TODO make sure slot isn't taken
+            #TODO lock time slot to prevent race conditions
+
             talk = form.save(commit=False)
             talk.presenter = request.user
             talk.save()
-        print form.errors
+
+            return redirect(reverse('talk_prep'))
+
         return render(request, self.template_name, {'form': form})
 
+
+class TalkPrep(View):
+
+    template_name = 'presenters/talk_prep.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
 

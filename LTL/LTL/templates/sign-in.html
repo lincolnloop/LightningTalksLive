@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block head_title %}Take the Stage{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+Sign in or register with:
+<a href="{% url "socialauth_begin" "twitter" %}">Twitter</a>
+{% endblock %}

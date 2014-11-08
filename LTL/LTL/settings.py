@@ -142,7 +142,7 @@ AUTHENTICATION_BACKENDS = (
 TWITTER_CONSUMER_KEY         = 'nZz9M4rGIRIS18uP1ECvMRuQS'
 TWITTER_CONSUMER_SECRET      = '8XAIbiH4XkCw8L6vWxPCIowLTuUHeF2osRmpDTOQKx0iWX75Nu'
 
-LOGIN_URL          = '/login-form/'
+LOGIN_URL          = '/sign-in/'
 LOGIN_REDIRECT_URL = '/upcoming/'
 LOGIN_ERROR_URL    = '/login-error/'
 

@@ -10,6 +10,7 @@ class ProfileForm(forms.ModelForm):
 
 
 class TalkForm(forms.ModelForm):
+    when = forms.CharField(widget=forms.HiddenInput())
     class Meta:
         model = models.Talk
         exclude = ('presenter', )

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load scheduling %}
+{% load tz %}
+
 
 {% block head_title %}Take the Stage{% endblock %}
 {% block body_class %}home{% endblock %}
@@ -20,7 +22,9 @@
 <h2>Give a Talk</h2>
 <ul>
 {% for slot in open_slots %}
-    <li><a href="{% url "create_talk" %}?when={{slot}}">{{ slot }}</a></li>
+{% localtime on %}
+    <li><a href="{% url "create_talk" %}?year={{slot.year}}&month={{slot.month}}&day={{slot.day}}&hour={{slot.hour}}&minute={{slot.minute}}">{{ slot }}</a></li>
+{% endlocaltime %}
 {% endfor %}
 </ul>
 {% endblock %}

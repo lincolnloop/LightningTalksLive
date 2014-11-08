@@ -12,7 +12,7 @@
         {{ form.title }}
         {{ form.description }}
         {{ form.topics }}
-        <input type="hidden" name="when" value="{{request.GET.when}}"/>
+        {{ form.when }}
         <button type="submit">Save</button>
     </form>
 </div>
